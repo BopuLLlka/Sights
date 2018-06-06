@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity" >
+</fragment>
+
+    <TextView
+        android:id="@+id/logText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/currentSightMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFAFA"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/currentSight"
+            android:layout_width="253dp"
+            android:layout_height="60dp"
+            android:gravity="start"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/openButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DCDCDC"
+            android:text="@string/openString" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:background="#FFFAFA"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="272dp" />
+
+         <RatingBar
+             android:layout_marginTop="10dp"
+             android:id="@+id/ratingBar"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/imageView"
+             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:paddingTop="0dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_below="@id/ratingBar"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:scrollbars = "vertical"
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameText"
+            android:maxLines = "10"/>
+
+         <Button
+             android:id="@+id/closeButton"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="#DCDCDC"
+             android:layout_alignParentBottom="true"
+             android:text="@string/hideString" />
+
+
+     </RelativeLayout>
+</RelativeLayout>
